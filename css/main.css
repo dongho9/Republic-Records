@@ -1,0 +1,394 @@
+@charset "utf-8";
+
+body{
+    background-color: #000;
+    color: #fff;
+}
+/* 헤더서식 */
+header{
+    width: 100%;
+    height: 80px;
+    background:none;
+    z-index: 10;
+    position: fixed;
+    display: block;
+    transition: 0.5s;
+}
+h1{
+    top: 20px;
+    left: 5%;
+    position: absolute;
+    width: 300px;
+    height: 40px;
+}
+h1 img{
+    width: 100%;
+    height: 100%;
+}
+/* 내비게이션 서식 */
+.gnb{
+    width: 700px;
+    margin: 0 auto;
+}
+.gnb > ul{
+    list-style: none;
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: #fedb62;
+}
+.gnb > ul li > a{
+    line-height: 80px;
+    margin-left: 35px;
+    font-weight: bold;
+    /* color: #ff0; */
+    font-size: 24px;
+    text-transform: lowercase;
+}
+.gnb > ul li:hover a{
+    color: #fff;
+}
+.m_banner{
+    top: 0;
+    width: 100%;
+    height: 900px;
+}
+
+.main_banner{
+    height: 100%;
+    background-image: url(../img/bg02.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: brightness(70%);
+}
+.b_text{
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    text-align: right;
+    line-height: 130px;
+    background-attachment: fixed; 
+}
+.b_text h2:first-child{
+    text-indent: 70px;
+}
+.b_text .btn_box{
+    position: absolute;
+    transform: none;
+    left: auto;
+    right: 11%;
+    margin-top: 0;
+}
+.b_text .btn_box .va{
+    width: 200px;
+}
+
+
+h2{
+    font-size: 160px;
+    text-align: center;
+}
+.arti{
+    margin-top: 200px;
+}
+.a_total{
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+.ar{
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/ar01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(70%);
+}
+.bg02{
+    background-image: url(../img/ar02.jpg);
+}
+.bg03{
+    background-image: url(../img/ar03.jpg);
+}
+.bg04{
+    background-image: url(../img/ar04.jpg);
+}
+.bg05{
+    background-image: url(../img/ar05.jpg);
+}
+.bg06{
+    background-image: url(../img/ar06.jpg);
+}
+.bg07{
+    background-image: url(../img/ar07.jpg);
+}
+.bg08{
+    background-image: url(../img/ar08.jpg);
+}
+.bg09{
+    background-image: url(../img/ar09.jpg);
+}
+.bg10{
+    background-image: url(../img/ar10.jpg);
+}
+.bg11{
+    background-image: url(../img/ar11.jpg);
+}
+.bg12{
+    background-image: url(../img/ar12.jpg);
+}
+.bg13{
+    background-image: url(../img/ar13.jpg);
+}
+.bg14{
+    background-image: url(../img/ar14.jpg);
+}
+.bg15{
+    background-image: url(../img/ar15.jpg);
+}
+.bg16{
+    background-image: url(../img/ar16.jpg);
+}
+.bg17{
+    background-image: url(../img/ar17.jpg);
+}
+.bg18{
+    background-image: url(../img/ar18.jpg);
+}
+.bg19{
+    background-image: url(../img/ar19.jpg);
+}
+.bg20{
+    background-image: url(../img/ar20.jpg);
+}
+.bg21{
+    background-image: url(../img/ar21.jpg);
+}
+.bg22{
+    background-image: url(../img/ar22.jpg);
+}
+.bg23{
+    background-image: url(../img/ar23.jpg);
+}
+.bg24{
+    background-image: url(../img/ar24.jpg);
+}
+.ar:hover .ar_info{
+    opacity: 1;
+}
+.ar p{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    font-size: 46px;
+    font-weight: bold;
+}
+.ar_info{
+    background-image: url(../img/overlay.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0; /* 처음에는 투명하게 설정합니다. */
+    transition: opacity 0.3s ease; /* 애니메이션 효과 추가 */
+}
+.ar_info a{
+    color: #fedb62;
+    left: 5%;
+    top: 5%;
+    position: absolute;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.ar_info a:hover{
+    color: #fff;
+}
+.ar_sns{
+    /* display: none; */
+}
+i.fab:hover{
+    color: #fff;
+}
+
+
+.btn_box{
+    margin-top: 30px;
+    width: 140px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.btn_box:hover  .va2{
+}
+.btn_box:hover .va1{
+    top: 5px;
+    left: 5px;
+}
+.va{
+    width: 140px;
+    height: 40px;
+    background-color: #000;
+    border: 1px solid #fedb62;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    position: absolute;
+}
+.va1{
+    z-index: 1;
+}
+.va2{
+    top: 5px;
+    left: 5px;
+}
+.va a{
+    color: #fedb62;
+}
+
+
+.videos{
+    margin-top: 200px;
+    width: 100%;
+    position: relative;
+}
+.videos h2{
+    text-align: left;
+    margin-left: 10%;
+}
+.next{
+    position: absolute;
+    right: 5%;
+    top: 6%; 
+    width: 200px;
+}
+.next i.fas{
+    font-size: 48px;
+    color: #fedb62;
+    position: absolute;
+    cursor: pointer;
+}
+i.fa-arrow-left-long{
+    right: 40%;
+}
+i.fa-arrow-right-long{
+    right: 0;
+}
+.vi_total{
+    width: 100%;
+}
+.sm_total{
+    margin-top: 60px;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid #333;
+    display: flex;
+}
+.big_vi{
+    width: 100%;
+    height: 1100px;
+    position: relative;
+}
+.big_vi p{
+    position: absolute;
+    bottom: 3%;
+    left: 5%;
+    font-size: 60px;
+    font-weight: bold;
+}
+.big_img{
+    background-image: url(../img/vi01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: brightness(50%);
+}
+.sm_vi{
+    width: 33.333%;
+    height: 400px;
+    position: relative;
+}
+.sm_img{
+    background-image: url(../img/vi02.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: brightness(60%);
+}
+.sm2{
+    background: url(../img/vi03.jpg);
+    background-size: cover;
+}
+.sm3{
+    background: url(../img/vi04.jpg);
+    background-size: cover;
+}
+.sm_vi p{
+    position: absolute;
+    font-weight: bold;
+    font-size: 24px;
+    bottom: 10%;
+    left: 5%;
+}
+.videos .btn_box{
+    left: auto;
+    transform: none;
+    position: absolute;
+    right: 25%;
+}
+footer{
+    margin-top: 100px;
+    width: 100%;
+    background-color: #333;
+    height: 876px;
+    text-align: center;
+    line-height: 40px;
+    background-image: url(../img/footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.foot{
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+.foot h2{
+    padding-top: 120px;
+    font-size: 56px;
+    position: absolute;
+    left: 0;
+    line-height: 60px;
+}
