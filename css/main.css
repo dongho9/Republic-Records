@@ -12,17 +12,16 @@ header{
     width: 100%;
     height: 80px;
     background:none;
-    z-index: 10;
+    z-index: 10000000;
     position: fixed;
     display: block;
     transition: 0.5s;
 }
 h1{
-    top: 20px;
+    top: 24px;
     left: 2%;
     position: absolute;
-    width: 300px;
-    height: 40px;
+    width: 270px;
 }
 h1 img{
     width: 100%;
@@ -137,9 +136,55 @@ a{
     font-weight: bold;
     line-height: 140px;
 }
+.textbox01 span{
+    overflow: hidden;
+}
+.textbox02 span{
+    overflow: hidden;
+}
+.textbox01 span b{
+    display: block;
+    animation-name: txtani;
+    animation-duration: 1s;
+}
+.textbox02 span b{
+    opacity: 0;
+    display: block;
+    animation-name: txtani02;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+.listen_now{
+    animation-name: txtani;
+    animation-duration: 1s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+}
+@keyframes txtani{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes txtani02{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .listen_now{
     position: absolute;
     right: 0;
+    opacity: 0;
 }
 .b_text{
     position: absolute;
@@ -181,7 +226,7 @@ h2{
     position: absolute;
 }
 .arti_box{
-    padding-top: 100px;
+    padding-top: 120px;
 }
 .a_total{
     display: flex;
@@ -193,6 +238,7 @@ h2{
     height: 100%;
     overflow: hidden;
     position: relative;
+    transition: top 0.3s;
 }
 .bg{
     position: absolute;
@@ -206,6 +252,58 @@ h2{
     background-size: cover;
     filter: brightness(70%);
 }
+.ar1.motion{
+    position: relative;
+    animation-name: Ani;
+    animation-duration: 1s;
+}
+.ar2.motion{
+    position: relative;
+    animation-name: Ani02;
+    animation-duration: 1s;
+}
+.ar3.motion{
+    position: relative;
+    animation-name: Ani03;
+    animation-duration: 1s;
+}
+.ar4.motion{
+    position: relative;
+    animation-name: Ani04;
+    animation-duration: 1s;
+}
+@keyframes Ani{
+    0%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+  }
+  @keyframes Ani02{
+    0%{
+        transform: translateY(80px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+  }
+  @keyframes Ani03{
+    0%{
+        transform: translateY(110px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+  }
+  @keyframes Ani04{
+    0%{
+        transform: translateY(140px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+  }
 .bg02{
     background-image: url(../img/ar02.jpg);
 }
@@ -401,10 +499,8 @@ i.fa-arrow-right-long{
     width: 100%;
 }
 .sm_total{
-    margin-top: 60px;
     width: 100%;
     position: relative;
-    border-top: 1px solid #333;
     display: flex;
 }
 .big_vi{
@@ -422,7 +518,7 @@ i.fa-arrow-right-long{
 .big_img{
     background-image: url(../img/video01.jpeg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     width: 100%;
     height: 100%;
@@ -437,7 +533,6 @@ i.fa-arrow-right-long{
     position: relative;
 }
 .sm_img{
-    background-image: url(../img/video02.jpeg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -447,6 +542,10 @@ i.fa-arrow-right-long{
     left: 0;
     top: 0;
     filter: brightness(60%);
+}
+.sm1{
+    background: url(../img/video02.jpeg);
+    background-size: cover;
 }
 .sm2{
     background: url(../img/video03.jpeg);
