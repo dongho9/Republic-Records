@@ -1144,6 +1144,10 @@ select{
     }
 }   
 @media screen and (max-width: 540px){
+    .swiper-slide {
+        overflow-y: hidden; /* 세로 스크롤 비활성화 */
+        -webkit-overflow-scrolling: auto; /* iOS에서 스크롤 동작을 최적화 */
+    }
     h1{
         width: 200px;
         top: 28px;
@@ -1152,10 +1156,18 @@ select{
         font-size: 60px;
     }
     .textbox{
-        line-height: 30px;
+        line-height: 35px;
     }
     .textbox h3{
         font-size: 54px;
+        line-height: 55px;
+    }
+    .textbox02 span b{
+        font-size: 14px;
+    }
+    .textbox p{
+        font-size: 14px;
+        line-height: 30px;
     }
     .arti_box{
         padding-top: 45px;
