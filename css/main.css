@@ -1,11 +1,17 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');    
+html{
+    overflow-x: hidden;
+}
 body{
     background-color: #000;
     color: #fff;
     font-family: "Archivo Black", sans-serif;
     font-weight: 700;
     overflow-x: hidden;
+}
+.bars{
+    display: none;
 }
 /* 헤더서식 */
 header{
@@ -88,7 +94,6 @@ a{
     border: 2px solid #fedb62 !important;
 }
 .swiper-bg{
-    background-position: contain;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -132,6 +137,7 @@ a{
     line-height: 60px;
 }
 .textbox h3{
+    letter-spacing: -3px;
     font-size: 145px;
     font-weight: bold;
     line-height: 140px;
@@ -212,6 +218,7 @@ a{
 h2{
     font-size: 160px;
     text-align: center;
+    letter-spacing: -3px;
 }
 .arti{
     position: relative;
@@ -227,15 +234,13 @@ h2{
 }
 .arti_box{
     padding-top: 120px;
-}
-.a_total{
     display: flex;
     width: 100%;
-    height: 500px;
+    flex-wrap: wrap;
 }
 .ar{
     width: 25%;
-    height: 100%;
+    height: 500px;
     overflow: hidden;
     position: relative;
     transition: top 0.3s;
@@ -385,6 +390,7 @@ h2{
     left: 5%;
     font-size: 46px;
     font-weight: bold;
+    letter-spacing: -3px;
 }
 .ar_info{
     background-image: url(../img/overlay.png);
@@ -473,7 +479,7 @@ i.fab:hover{
 }
 .videos > h2, .shop > h2{
     z-index: 1;
-    left: 10%;
+    left: 7%;
     top: 0;
     position: absolute;
 }
@@ -562,7 +568,7 @@ i.fa-arrow-right-long{
     bottom: 10%;
     left: 5%;
 }
-.videos .btn_box{
+.videos .btn_box, .shopall{
     left: 75%;
 }
 
@@ -620,7 +626,7 @@ i.fa-arrow-right-long{
 .shopbg{
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -630,7 +636,7 @@ i.fa-arrow-right-long{
     transition: 0.3s;
 }
 .shopbg01{
-    background-color: #000;
+    background-color: #0053A9;
     background-image: url(../img/shop01.png);
 }
 .shopbg02{
@@ -664,7 +670,7 @@ i.fa-arrow-right-long{
     width: 50%;
     height: 50%;
 }
-.shop_all .btn_box{
+.shopall{
     left: 75%;
 }
 footer{
@@ -679,12 +685,12 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 200px 400px; 
     box-sizing: border-box;
-    box-sizing: border-box;
+    padding: 220px 20%;
 }
 .footer_top{
-    width: 700px;
+    position: absolute;
+    width: 750px;
     line-height: 50px;
 }
 .footer_form{
@@ -728,8 +734,9 @@ select{
     color: #fedb62; /* 화살표 색상 */
   }
 .footer_top h2{
-    font-size: 56px;
+    font-size: 50px;
     text-align: left;
+    margin-bottom: 20px;
 }
 .form_left p:first-child, .form_right p:first-child{
     color: #fedb62;
@@ -765,6 +772,7 @@ select{
     color: #fff;
     line-height: 20px;
     font-weight: bold;
+    font-size: 14px;
 }
 .form_four span{
     color: #fedb62;
@@ -882,4 +890,285 @@ select{
 }
 .mar_img25{
     background-image: url(../img/mar25.png);
+}
+.footer_right{
+    position: absolute;
+    right: 20%;
+    top: 25%;
+    width: 250px;
+}
+.right01{
+    margin-bottom: 100px;
+}
+.right01 li a:hover{
+    color: #fff;
+}
+.footer_right .shopbtn > .btn_box{
+    left: 0;
+    transform: none;
+    margin-top: 20px;
+}
+.shopbtn > .btn_box > .va{
+    background-color: #fedb62;
+    color: #000;
+    border: 2px solid #000;
+}
+.footer_right ul{
+    text-align: left;
+    line-height: 30px;
+}
+.right02{
+    padding-top: 20px;
+    border-top: 1px solid #fff;
+    font-size: 12px;
+}
+.right02 li a{
+    color: #fff;
+}
+.right02 li a:hover{
+    color: #fedb62;
+}
+.footer_sns{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.footer_sns li i{
+    color: #fff !important;
+}
+@media screen and (max-width: 1730px) {
+    footer{
+        padding: 200px 15%;
+    }
+    .footer_right{
+        right: 15%;
+    }
+}
+@media screen and (max-width: 1490px) {
+    footer{
+        padding: 200px 10%;
+    }
+    .footer_right{
+        right: 10%;
+    }
+    .shop_con{
+        height: 600px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    footer{
+        padding: 200px 5%;
+    }
+    .footer_right{
+        right: 5%;
+    }
+
+    .gnb > ul{
+        justify-content: center;
+    }
+    .gnb > ul li a{
+        font-size: 16px;
+    }
+    .ar{
+        width: 33.33%;
+        height: 400px;
+    }
+    .sm_vi{
+        height: 250px;
+    }
+    .shop_con{
+        height: 1100px;
+    }
+    .shop_left{
+        width: 100%;
+    }
+    .shop_right{
+        width: 100%;
+    }
+    footer{
+        margin-top: 1300px;
+    }
+}
+@media screen and (max-width: 1024px){
+    h1{
+        left: 4%;
+    }
+    .gnb{
+        position: absolute;
+        top: 60px;
+        width: 100%;
+    }
+    .bars{
+        display: block;
+        position: relative;
+        height: 30px;
+        width: 30px;
+        float: right;
+        right: 4%;
+        top: 26px;
+        cursor: pointer;
+    }
+    .bars span{
+        display: block;
+    }
+    .bars span::after{
+         content: "";
+         width: 100%;
+         display: block;
+         height: 3px;
+         background-color: #fff;
+         position: absolute;
+         top: 0;
+         left: 0;
+    }
+    .bars span:nth-child(2)::after{
+        top: 10px;
+    }
+    .bars span:last-child::after{
+        top: 20px;
+    }
+    .gnb{
+        display: none;
+    }
+    .bars_hide{
+        display: none !important;
+    }
+    .bars_rotate01{
+        transform: rotate(45deg) translate(10px,-1px);   
+    }
+    .bars_rotate02{
+        transform: rotate(-45deg) translateY(-12px);
+    }
+    .gnb_open{
+        display: block;
+    }
+    .header_bg{
+        background-color: #000 !important;
+    }
+    .ar{
+        width: 50%;
+        height: 450px;
+    }
+    .shop_con{
+        height: 900px;
+    }
+    .sm_total{
+        flex-direction: column;
+    }
+    .sm_img, .big_img{
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    }
+    .sm_vi, .big_vi{
+        width: 100%;
+        height: 600px;
+    }
+    footer{
+        margin-top: 900px;
+        height: 180vh;
+        padding: 200px 10%;
+        position: relative;
+        width: 100%;
+    }
+    .marquee{
+        bottom: 40%;
+    }
+    .footer_top{
+        width: 100%;
+        position: relative;
+    }
+    .footer_top h2{
+        text-align: center;
+        font-size: 35px;
+    }
+    .form_three{
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+    .form_four{
+        text-align: center;
+    }
+    .form_four br{
+        display: none;
+    }
+    .footer_right{
+        top: auto;
+        bottom: 5%;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer_right ul{
+        text-align: center;
+    }
+    .footer_right .shopbtn > .btn_box {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .shop_con{
+        height: 800px;
+    }
+}
+@media screen and (max-width: 800px){
+    .swiper-bg{
+    background-position: center;
+    background-position: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%);
+}
+.swiper-bg08{
+    background-position: left !important;
+}
+    .ar{
+        height: 350px;
+    }
+    .sm_vi, .big_vi{
+        width: 100%;
+        height: 380px;
+    }
+    .sm_img, .big_img{
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    }
+    .shop_con{
+        height: 650px;
+    }
+    footer{
+        margin-top: 650px;
+    }
+}   
+@media screen and (max-width: 540px){
+    h1{
+        width: 200px;
+        top: 28px;
+    }
+    h2{
+        font-size: 60px;
+    }
+    .textbox{
+        line-height: 30px;
+    }
+    .textbox h3{
+        font-size: 54px;
+    }
+    .arti_box{
+        padding-top: 45px;
+    }
+    .gnb{
+        height: 100vh;
+    }
+    .gnb ul{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .gnb ul li a{
+        margin-left: 0;
+    }
 }
