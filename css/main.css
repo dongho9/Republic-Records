@@ -1160,6 +1160,13 @@ select{
     .arti_box{
         padding-top: 45px;
     }
+    .ar{
+        height: 200px;
+    }
+    .ar p {
+        font-size: 24px;
+        letter-spacing: 0;
+    }
     .gnb{
         height: 100vh;
     }
@@ -1170,5 +1177,70 @@ select{
     }
     .gnb ul li a{
         margin-left: 0;
+    }
+    .big_vi p {
+        font-size: 24px;
+        bottom: 10%;
+    }
+    .shop_con{
+        height: 2100px;
+    }
+    .shop_left{
+        height: 20%;
+    }
+    .shop_left .shop_text h3 {
+        font-size: 18px;
+    }
+    .shop_left .shop_text h4 {
+        font-size: 16px;
+    }
+    .shop_right{
+        height: 75%;
+    }
+    .shop_right .shop_text h3 {
+        font-size: 18px;
+    }
+    .shop_right .shop_text h4 {
+        font-size: 16px;
+    }
+    .shop_right ul li {
+        width: 100%;
+        height: 25%;
+    }
+    .shopall {
+        position: relative;
+        z-index: 100;
+        margin-top: -50px;
+    }
+    .marquee{
+        bottom: 47%;
+    }
+    footer{
+        margin-top: 0px;
+        padding: 130px 5%;
+        height: 200vh;
+    }
+    .form_left, .form_right{
+        width: 100%;
+    }
+    .footer_right{
+        bottom: 20%;
+    }
+    .form_right::after {
+        top: 10%;
+    }
+}
+@media screen and (max-width: 376px){
+    footer{
+        height: 230vh;
+    }
+    .shop_con{
+        height: 1600px;
+    }
+    .marquee{
+        bottom: 37%;
+    }
+    .footer_right{
+        bottom: 5%;
     }
 }
