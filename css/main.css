@@ -472,14 +472,14 @@ i.fab:hover{
 
 
 .videos, .shop{
-    margin-top: 250px;
+    margin-top: 200px;
     width: 100%;
     position: relative;
     padding-top: 90px;
 }
 .videos > h2, .shop > h2{
     z-index: 1;
-    left: 7%;
+    left: 3%;
     top: 0;
     position: absolute;
 }
@@ -488,6 +488,7 @@ i.fab:hover{
     right: 5%;
     top: 0; 
     width: 200px;
+    z-index: 20;
 }
 .next i.fas{
     font-size: 48px;
@@ -503,45 +504,24 @@ i.fa-arrow-right-long{
 }
 .vi_total{
     width: 100%;
-}
-.sm_total{
-    width: 100%;
-    position: relative;
     display: flex;
+    flex-wrap: wrap;
 }
-.big_vi{
+.sm_vi:first-child{
     width: 100%;
     height: 1100px;
-    position: relative;
-}
-.big_vi p{
-    position: absolute;
-    bottom: 3%;
-    left: 5%;
-    font-size: 60px;
-    font-weight: bold;
-}
-.big_img{
-    background-image: url(../img/video01.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    filter: brightness(50%);
 }
 .sm_vi{
-    width: 33.333%;
-    height: 400px;
+    width: 33.3%;
+    height: 370px;
     position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
 }
-.sm_img{
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+.sm_vi > .sm_img{
+    background-repeat: no-repeat !important;
+    background-size: cover; /* 배경 이미지가 요소를 가득 채우도록 조정 */
+    background-position: center !important;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -549,17 +529,18 @@ i.fa-arrow-right-long{
     top: 0;
     filter: brightness(60%);
 }
+
 .sm1{
-    background: url(../img/video02.jpeg);
-    background-size: cover;
+    background: url(../img/video01.jpeg);
 }
 .sm2{
-    background: url(../img/video03.jpeg);
-    background-size: cover;
+    background: url(../img/video02.jpeg);
 }
 .sm3{
+    background: url(../img/video03.jpeg);
+}
+.sm4{
     background: url(../img/video04.jpeg);
-    background-size: cover;
 }
 .sm_vi p{
     position: absolute;
@@ -568,7 +549,13 @@ i.fa-arrow-right-long{
     bottom: 10%;
     left: 5%;
 }
-.videos .btn_box, .shopall{
+.vi_total:hover{
+    cursor: url(../img/cursor.svg), auto;
+}
+.play_btn{
+    display: none;
+}
+.videos .btn_box, .shop_all{
     left: 75%;
 }
 
@@ -938,14 +925,26 @@ select{
     color: #fff !important;
 }
 @media screen and (max-width: 1730px) {
+    .ar{
+        height: 400px;
+    }
     footer{
         padding: 200px 15%;
     }
     .footer_right{
         right: 15%;
     }
+    .sm_vi:first-child{
+        height: 900px;
+    }
+    .sm_vi{
+        height: 300px;
+    }
 }
-@media screen and (max-width: 1490px) {
+@media screen and (max-width: 1520px) {
+    .ar{
+        height: 350px;
+    }
     footer{
         padding: 200px 10%;
     }
@@ -955,8 +954,42 @@ select{
     .shop_con{
         height: 600px;
     }
+    .sm_vi:first-child{
+        height: 800px;
+    }
+    .sm_vi{
+        height: 280px;
+    }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1350px) {
+    .sm_vi:first-child{
+        height: 720px;
+    }
+    .sm_vi{
+        height: 250px;
+    }
+}
+@media screen and (max-width: 1220px) {
+    .vi_total:hover{
+        cursor:auto
+    }
+    .big_vi {
+        height: 700px;
+    }
+    .play_btn{
+        display: block;
+        width: 86px;
+        height: 86px;
+        background-image: url('../img/cursor.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
     footer{
         padding: 200px 5%;
     }
@@ -974,11 +1007,9 @@ select{
         width: 33.33%;
         height: 400px;
     }
-    .sm_vi{
-        height: 250px;
-    }
     .shop_con{
         height: 1100px;
+        margin-bottom: 1140px;
     }
     .shop_left{
         width: 100%;
@@ -988,6 +1019,12 @@ select{
     }
     footer{
         margin-top: 1300px;
+    }
+    .sm_vi:first-child{
+        height: 620px;
+    }
+    .sm_vi{
+        height: 200px;
     }
 }
 @media screen and (max-width: 1024px){
@@ -1050,20 +1087,15 @@ select{
         width: 50%;
         height: 450px;
     }
-    .shop_con{
-        height: 900px;
-    }
     .sm_total{
         flex-direction: column;
     }
-    .sm_img, .big_img{
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center !important;
-    }
-    .sm_vi, .big_vi{
+    .sm_vi{
         width: 100%;
-        height: 600px;
+        height: 550px !important;
+    }
+    .sm_img{
+        background-position: none !important;
     }
     footer{
         margin-top: 900px;
@@ -1110,6 +1142,27 @@ select{
     }
     .shop_con{
         height: 800px;
+        margin-bottom: 840px;
+    }
+}
+@media screen and (max-width: 940px){
+    .sm_vi{
+        height: 520px !important;
+    }
+}
+@media screen and (max-width: 900px){
+    .sm_vi{
+        height: 500px !important;
+    }
+}
+@media screen and (max-width: 870px){
+    .sm_vi{
+        height: 480px !important;
+    }
+}
+@media screen and (max-width: 850px){
+    .sm_vi{
+        height: 460px !important;
     }
 }
 @media screen and (max-width: 800px){
@@ -1127,22 +1180,33 @@ select{
     .ar{
         height: 350px;
     }
-    .sm_vi, .big_vi{
-        width: 100%;
-        height: 380px;
-    }
-    .sm_img, .big_img{
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center !important;
-    }
     .shop_con{
         height: 650px;
+        margin-bottom: 690px;
+    }
+    .shop_all{
+        z-index: 30;
     }
     footer{
         margin-top: 650px;
     }
+    .sm_vi{
+        height: 420px !important;
+    }
+    .sm_vi p {
+        font-size: 20px !important;
+    }
 }   
+@media screen and (max-width: 720px){
+    .sm_vi{
+        height: 400px !important;
+    }
+}
+@media screen and (max-width: 680px){
+    .sm_vi{
+        height: 380px !important;
+    }
+}
 @media screen and (max-width: 540px){
     .swiper-slide {
         overflow-y: hidden; /* 세로 스크롤 비활성화 */
@@ -1179,6 +1243,22 @@ select{
         font-size: 24px;
         letter-spacing: 0;
     }
+    .ar_info a{
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 100%;
+    }
+    .ar_sns{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        right: auto;
+    }
     .gnb{
         height: 100vh;
     }
@@ -1190,12 +1270,9 @@ select{
     .gnb ul li a{
         margin-left: 0;
     }
-    .big_vi p {
-        font-size: 24px;
-        bottom: 10%;
-    }
     .shop_con{
         height: 2100px;
+        margin: 0 !important;
     }
     .shop_left{
         height: 20%;
@@ -1207,7 +1284,7 @@ select{
         font-size: 16px;
     }
     .shop_right{
-        height: 75%;
+        height: 80%;
     }
     .shop_right .shop_text h3 {
         font-size: 18px;
@@ -1225,7 +1302,7 @@ select{
         margin-top: -50px;
     }
     .marquee{
-        bottom: 47%;
+        bottom: 42%;
     }
     footer{
         margin-top: 0px;
@@ -1236,11 +1313,14 @@ select{
         width: 100%;
     }
     .footer_right{
-        bottom: 20%;
+        bottom: 12%;
     }
     .form_right::after {
         top: 10%;
     }
+        .sm_vi{
+            height: 240px !important;
+        }
 }
 @media screen and (max-width: 376px){
     footer{
@@ -1250,9 +1330,12 @@ select{
         height: 1600px;
     }
     .marquee{
-        bottom: 37%;
+        bottom: 38%;
     }
     .footer_right{
-        bottom: 5%;
+        bottom: 8%;
+    }
+    .sm_vi{
+        height: 200px !important;
     }
 }
