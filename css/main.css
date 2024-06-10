@@ -136,10 +136,11 @@ a{
     color : #fff;
     line-height: 80px;
 }
-.textbox h3{
+.textbox h2{
+    text-align: right;
     letter-spacing: -3px;
     font-size: 135px;
-    line-height: 100px;
+    line-height: 150px;
 }
 .textbox01 span{
     overflow: hidden;
@@ -167,7 +168,7 @@ a{
     animation-fill-mode: forwards;
 }
 .listen_now > .btn_box{
-    margin-top: 0px;
+    margin-top: 30px;
 }
 @keyframes txtani{
     0%{
@@ -706,6 +707,10 @@ input::placeholder{
     opacity: 1;
     font-size: 16px;
 }
+.form_right label{
+    opacity: 0;
+    position: absolute;
+}
 select{
     color: #fff;
     font-size: 16px;
@@ -713,15 +718,6 @@ select{
     -webkit-appearance: none; /* 사파리 기본 화살표 제거 */
     -moz-appearance: none; /* 파이어폭스 기본 화살표 제거 */
 }
-.form_right::after {
-    display: block;
-    content: '▼'; /* 화살표 표시 */
-    position: absolute;
-    top: 18%;
-    right: 25px;
-    font-size: 22px;
-    color: #fedb62; /* 화살표 색상 */
-  }
 .footer_top h2{
     font-size: 50px;
     text-align: left;
@@ -765,6 +761,10 @@ select{
 }
 .form_four span{
     color: #fedb62;
+}
+.submit{
+    left: auto;
+    transform: none;
 }
 .marquee_con{
     position: absolute;
@@ -1241,7 +1241,7 @@ select{
     .textbox{
         line-height: 35px;
     }
-    .textbox h3{
+    .textbox h2{
         font-size: 54px;
         line-height: 55px;
     }
@@ -1333,9 +1333,6 @@ select{
     }
     .footer_right{
         bottom: 12%;
-    }
-    .form_right::after {
-        top: 10%;
     }
         .sm_vi{
             height: 240px !important;
