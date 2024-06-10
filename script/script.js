@@ -1,9 +1,27 @@
 $(document).ready(function(){
     $('.animate').scrolla({
-        mobile:true, //모바일 버전시 활성화
-        once:false //스크롤시 애니메이션 반복 실행
-    })
-})
+        mobile: true, // 모바일 버전 활성화
+        once: false // 스크롤시 애니메이션 반복 실행
+    });
+
+    var lastScrollTop = 0; // 이전 스크롤 위치 저장
+
+    $(window).scroll(function() {
+        var currentScrollTop = $(this).scrollTop(); // 현재 스크롤 위치
+        
+        if (currentScrollTop < lastScrollTop) {
+            // 스크롤을 위로 올리면 .animate 클래스 제거
+            $('.ar').removeClass('animate');
+        }
+        else{
+            $('.ar').removeClass('animate');
+        }
+
+        // 현재 스크롤 위치를 이전 스크롤 위치로 업데이트
+        lastScrollTop = currentScrollTop;
+    });
+});
+
 
 $(document).ready(function(){
     $('.btn_box').mouseenter(function(){
@@ -44,5 +62,14 @@ $(document).ready(function(){
         $('.bars span:first-child').toggleClass('bars_rotate01');
         $('.bars span:last-child').toggleClass('bars_rotate02');
         $('.bars span:nth-child(2)').toggleClass('bars_hide');
+    })
+})
+
+$(document).ready(function(){
+    $('.marquee_con').mouseenter(function(){
+        $('.marquee').css({'animation-play-state':'paused'})
+    })
+    $('.marquee_con').mouseleave(function(){
+        $('.marquee').css({animation : 'animate-marquee 20s infinite linear'})
     })
 })
